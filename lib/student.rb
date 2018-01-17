@@ -58,6 +58,6 @@ class Student
 
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = (?)"
-    new_from_db(DB[:conn].execute(sql, @name)[0])
+    new_from_db(DB[:conn].execute(sql, @name))
   end
 end
